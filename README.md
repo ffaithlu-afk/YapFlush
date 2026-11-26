@@ -51,6 +51,17 @@ Typing polished posts, messages, or prompts takes effort—especially when you'r
   <img src="docs/settings.png" width="880" alt="YapFlush Native macOS Settings" />
 </p>
 
+## Make the English sound like you
+
+1. **Try the original first.** Give Gemini or your preferred writing agent the [default rewrite prompt](YapFlush/Resources/XEnglish.txt) and tell it you want to review the prompt. Dictate a few things you would actually say using YapFlush’s default English mode. Keep the Chinese originals alongside the English it produced.
+2. **Score the results before editing.** Give the agent those pairs and two or three English messages you wrote and would happily send. Ask it to score each rewrite from 1 to 5 on meaning, natural English, and resemblance to your voice. Have it point to specific words. Tell it which judgments you agree with and what you would say instead.
+3. **Turn your feedback into rules and examples.** Ask the agent to revise the original prompt and add a few short Chinese → English pairs you approve of as few-shot examples. Give each pair a distinct job, such as keeping a dry joke dry, shortening a polite request, or preserving a technical term.
+4. **Try fresh input.** Paste the whole prompt into **Settings → AI Services → X English System Prompt**. It saves automatically. Dictate two sentences you kept out of the examples and see if the results sound like something you would send.
+
+Send this to your agent along with your samples:
+
+> I’ll share the original YapFlush prompt, Chinese transcripts paired with their default English output, and examples of my own English. Score each rewrite from 1 to 5 for meaning, naturalness, and fit with my voice. Quote the words behind each score. Wait for my feedback on what sounds like me before revising the prompt. Then give me one ready-to-paste English system prompt with concise style rules and distinct Chinese-to-English examples. Keep the instruction to return only the final English text.
+
 ---
 
 ## Supported AI Providers
