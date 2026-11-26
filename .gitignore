@@ -1,0 +1,25 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Xcode & Build Artifacts
+build/
+DerivedData/
+*.app
+*.dmg
+*.zip
+*.xcarchive
+*.ipa
+*.dSYM.zip
+*.dSYM
+*.xcuserstate
+xcuserdata/
+*.xccheckout
+*.moved-aside
+*.hmap
+
+# SwiftPM / Local Scratch
+.swiftpm/
+.build/
+*.log

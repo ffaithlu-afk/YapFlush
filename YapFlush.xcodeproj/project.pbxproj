@@ -1,0 +1,112 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 60;
+	objects = {
+		594150464C55000000000064 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AudioRecorder.swift"; sourceTree = "<group>";};
+		594150464C550000000000C8 = {isa = PBXBuildFile; fileRef = 594150464C55000000000064;};
+		594150464C55000000000065 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AIClient.swift"; sourceTree = "<group>";};
+		594150464C550000000000C9 = {isa = PBXBuildFile; fileRef = 594150464C55000000000065;};
+		594150464C55000000000066 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GlobalShortcut.swift"; sourceTree = "<group>";};
+		594150464C550000000000CA = {isa = PBXBuildFile; fileRef = 594150464C55000000000066;};
+		594150464C55000000000067 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Preferences.swift"; sourceTree = "<group>";};
+		594150464C550000000000CB = {isa = PBXBuildFile; fileRef = 594150464C55000000000067;};
+		594150464C55000000000068 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsView.swift"; sourceTree = "<group>";};
+		594150464C550000000000CC = {isa = PBXBuildFile; fileRef = 594150464C55000000000068;};
+		594150464C55000000000069 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StatusHUD.swift"; sourceTree = "<group>";};
+		594150464C550000000000CD = {isa = PBXBuildFile; fileRef = 594150464C55000000000069;};
+		594150464C5500000000006A = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextInsertion.swift"; sourceTree = "<group>";};
+		594150464C550000000000CE = {isa = PBXBuildFile; fileRef = 594150464C5500000000006A;};
+		594150464C5500000000006B = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "YapFlushApp.swift"; sourceTree = "<group>";};
+		594150464C550000000000CF = {isa = PBXBuildFile; fileRef = 594150464C5500000000006B;};
+		594150464C5500000000006F = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToiletRecordingView.swift"; sourceTree = "<group>";};
+		594150464C550000000000D3 = {isa = PBXBuildFile; fileRef = 594150464C5500000000006F;};
+		594150464C5500000000006C = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info.plist"; sourceTree = "<group>";};
+		594150464C5500000000006D = {isa = PBXFileReference; lastKnownFileType = text; path = "Resources/XEnglish.txt"; sourceTree = "<group>";};
+		594150464C550000000000D1 = {isa = PBXBuildFile; fileRef = 594150464C5500000000006D;};
+		594150464C5500000000006E = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "Resources/AppIcon.icns"; sourceTree = "<group>";};
+		594150464C550000000000D2 = {isa = PBXBuildFile; fileRef = 594150464C5500000000006E;};
+		594150464C55000000000070 = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Resources/toilet_sheet.png"; sourceTree = "<group>";};
+		594150464C550000000000D4 = {isa = PBXBuildFile; fileRef = 594150464C55000000000070;};
+		594150464C55000000000071 = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Resources/symbol_sheet.png"; sourceTree = "<group>";};
+		594150464C550000000000D5 = {isa = PBXBuildFile; fileRef = 594150464C55000000000071;};
+		594150464C55000000000006 = {isa = PBXFileReference; explicitFileType = wrapper.application; path = YapFlush.app; sourceTree = BUILT_PRODUCTS_DIR;};
+		594150464C55000000000003 = {isa = PBXGroup; children = (594150464C55000000000004, 594150464C55000000000005,); sourceTree = "<group>";};
+		594150464C55000000000004 = {isa = PBXGroup; children = (594150464C55000000000064, 594150464C55000000000065, 594150464C55000000000066, 594150464C55000000000067, 594150464C55000000000068, 594150464C55000000000069, 594150464C5500000000006A, 594150464C5500000000006B, 594150464C5500000000006F, 594150464C5500000000006C, 594150464C5500000000006D, 594150464C5500000000006E, 594150464C55000000000070, 594150464C55000000000071,); path = "YapFlush"; sourceTree = "<group>";};
+		594150464C55000000000005 = {isa = PBXGroup; children = (594150464C55000000000006,); name = "Products"; sourceTree = "<group>";};
+		594150464C55000000000007 = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (594150464C550000000000C8, 594150464C550000000000C9, 594150464C550000000000CA, 594150464C550000000000CB, 594150464C550000000000CC, 594150464C550000000000CD, 594150464C550000000000CE, 594150464C550000000000CF, 594150464C550000000000D3,); runOnlyForDeploymentPostprocessing = 0;};
+		594150464C55000000000008 = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0;};
+		594150464C55000000000009 = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (594150464C550000000000D1, 594150464C550000000000D2, 594150464C550000000000D4, 594150464C550000000000D5,); runOnlyForDeploymentPostprocessing = 0;};
+		594150464C55000000000002 = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 594150464C5500000000000B;
+			buildPhases = (594150464C55000000000007, 594150464C55000000000008, 594150464C55000000000009,);
+			buildRules = ();
+			dependencies = ();
+			name = YapFlush;
+			productName = YapFlush;
+			productReference = 594150464C55000000000006;
+			productType = "com.apple.product-type.application";
+		};
+		594150464C55000000000001 = {
+			isa = PBXProject;
+			attributes = {LastUpgradeCheck = 2710; };
+			buildConfigurationList = 594150464C5500000000000A;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (en, Base,);
+			mainGroup = 594150464C55000000000003;
+			productRefGroup = 594150464C55000000000005;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (594150464C55000000000002,);
+		};
+		594150464C5500000000000C = {isa = XCBuildConfiguration; name = Debug; buildSettings = {
+			ARCHS = "$(ARCHS_STANDARD)";
+			CLANG_ENABLE_MODULES = YES;
+			ENABLE_USER_SCRIPT_SANDBOXING = YES;
+			MACOSX_DEPLOYMENT_TARGET = 14.0;
+			SDKROOT = macosx;
+			SWIFT_VERSION = 6.0;
+			SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+			ENABLE_TESTABILITY = YES;
+		};};
+		594150464C5500000000000D = {isa = XCBuildConfiguration; name = Release; buildSettings = {
+			ARCHS = "$(ARCHS_STANDARD)";
+			CLANG_ENABLE_MODULES = YES;
+			ENABLE_USER_SCRIPT_SANDBOXING = YES;
+			MACOSX_DEPLOYMENT_TARGET = 14.0;
+			SDKROOT = macosx;
+			SWIFT_VERSION = 6.0;
+			SWIFT_COMPILATION_MODE = wholemodule;
+		};};
+		594150464C5500000000000E = {isa = XCBuildConfiguration; name = Debug; buildSettings = {
+			PRODUCT_NAME = "$(TARGET_NAME)";
+			PRODUCT_BUNDLE_IDENTIFIER = com.yapflush.mac;
+			CODE_SIGN_STYLE = Manual;
+			CODE_SIGN_IDENTITY = "-";
+			ENABLE_APP_SANDBOX = NO;
+			GENERATE_INFOPLIST_FILE = NO;
+			INFOPLIST_FILE = YapFlush/Info.plist;
+			CURRENT_PROJECT_VERSION = 1;
+			MARKETING_VERSION = 1.0.0;
+		};};
+		594150464C5500000000000F = {isa = XCBuildConfiguration; name = Release; buildSettings = {
+			PRODUCT_NAME = "$(TARGET_NAME)";
+			PRODUCT_BUNDLE_IDENTIFIER = com.yapflush.mac;
+			CODE_SIGN_STYLE = Manual;
+			CODE_SIGN_IDENTITY = "-";
+			ENABLE_APP_SANDBOX = NO;
+			GENERATE_INFOPLIST_FILE = NO;
+			INFOPLIST_FILE = YapFlush/Info.plist;
+			CURRENT_PROJECT_VERSION = 1;
+			MARKETING_VERSION = 1.0.0;
+		};};
+		594150464C5500000000000A = {isa = XCConfigurationList; buildConfigurations = (594150464C5500000000000C, 594150464C5500000000000D,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release;};
+		594150464C5500000000000B = {isa = XCConfigurationList; buildConfigurations = (594150464C5500000000000E, 594150464C5500000000000F,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release;};
+	};
+	rootObject = 594150464C55000000000001;
+}
