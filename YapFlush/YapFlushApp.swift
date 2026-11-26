@@ -617,7 +617,10 @@ final class AppController: NSObject, NSApplicationDelegate, NSMenuDelegate, NSWi
                 clearJob()
                 do {
                     guard accessibilityAuthorized else { throw VoiceTypeError.message("辅助功能未授权。") }
-                    try insertion.paste(result, into: snapshot.target)
+                    let pasteText = snapshot.mode == .english
+                        ? "\(result.trimmingCharacters(in: .whitespacesAndNewlines)) "
+                        : result
+                    try insertion.paste(pasteText, into: snapshot.target)
                     notify("已发送粘贴", detail: "可从菜单复制上次结果", symbol: "checkmark")
                 } catch {
                     notify("结果已保留", detail: "\(error.localizedDescription) 可从菜单复制。",

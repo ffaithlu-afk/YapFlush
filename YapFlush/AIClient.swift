@@ -188,18 +188,43 @@ struct AIClient: SpeechTranscriber, TextRewriter, Sendable {
 
     func rewrite(_ transcript: String, prompt: String) async throws -> AIResult {
         try Task.checkCancellation()
+        let wrapped = Self.wrapTranscript(transcript)
+        let response: AIResult
         switch rewriteConfig.protocolKind {
         case .geminiInteractions:
-            return try await sendGeminiInteraction(
+            response = try await sendGeminiInteraction(
                 config: rewriteConfig,
-                input: transcript,
+                input: wrapped,
                 generationConfig: ["thinking_level": "minimal"],
                 systemInstruction: prompt,
                 emptyErrorMessage: "模型没有返回改写后的文字。"
             )
         case .openAICompatible:
-            return try await sendOpenAIChat(config: rewriteConfig, prompt: prompt, userText: transcript)
+            response = try await sendOpenAIChat(config: rewriteConfig, prompt: prompt, userText: wrapped)
         }
+        let cleaned = Self.cleanRewriteOutput(response.text)
+        guard !cleaned.isEmpty else {
+            throw VoiceTypeError.message("模型没有返回改写后的文字。")
+        }
+        return AIResult(text: cleaned, usage: response.usage, model: response.model)
+    }
+
+    private static func wrapTranscript(_ transcript: String) -> String {
+        let safe = transcript
+            .replacingOccurrences(of: "</transcript>", with: "")
+            .trimmingCharacters(in: .whitespacesAndNewlines)
+        return "<transcript>\n\(safe)\n</transcript>"
+    }
+
+    private static func cleanRewriteOutput(_ raw: String) -> String {
+        var text = raw.trimmingCharacters(in: .whitespacesAndNewlines)
+        if text.hasPrefix("<transcript>") {
+            text.removeFirst("<transcript>".count)
+        }
+        if text.hasSuffix("</transcript>") {
+            text.removeLast("</transcript>".count)
+        }
+        return text.trimmingCharacters(in: .whitespacesAndNewlines)
     }
 
     func verifyConnection() async throws {
